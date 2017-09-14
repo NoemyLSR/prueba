@@ -1,0 +1,47 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login para varios usuario</title>
+</head>
+
+<body>
+<h1>Ingresa Tus Datos 
+</h1> 
+<form name="form" method="post">
+Usuario: <input type="email" name="usuario" id="usuario"/><br/>
+Contraseña: <input type="password" name="password" id="password"/><br/>
+<input type="button" id="send" value="Acceder" onclick="valida();"> 
+
+<script language="JavaScript"> 
+function envia(pag){
+    document.form.action = 'menu_desplegable.html';
+        document.form.submit();
+}
+ 
+function valida(){
+    var usuario = document.getElementById('usuario');
+    var pass = document.getElementById("password");
+
+     if((usuario.value == "noemi@gmail.com")&&(pass.value == "1234")){
+        window.location="prueba.html"; 
+    
+    }else{
+            
+    if((usuario.value == "")||(pass.value == "")){
+        window.alert("campos incorrectos");
+    }else{
+        envia('login');
+    }
+}
+}
+        </script> 
+</center> 
+<script language="Javascript"> 
+<!-- Begin 
+document.oncontextmenu = function(){return false} 
+// End --> 
+</script>
+</body>
+</html>
